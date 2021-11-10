@@ -1,0 +1,55 @@
+<div class='container'>
+  <header>
+    <div class="module-title">
+      <div class='title'>Controls</div>
+      <div class='underline'></div>
+    </div>
+  </header>
+  <p>
+    Some controls
+  </p>
+
+  <ejs-accordion expandMode='Single'>
+    <e-accordionitems>
+      <e-accordionitem expanded='true'>
+        <ng-template #header>
+          <div>Inplace edit</div>
+        </ng-template>
+        <ng-template #content>          
+          <ejs-inplaceeditor #inplace_editor mode="Inline"
+          type="Text" value='Andrew'></ejs-inplaceeditor>
+          <br/>
+          <ejs-inplaceeditor #inplace_editor mode="Popup"
+          type="Text" value='Florian'></ejs-inplaceeditor>
+        </ng-template>
+      </e-accordionitem>
+      <e-accordionitem expanded='false'>
+        <ng-template #header>
+          <div>Buttons</div>
+        </ng-template>
+        <ng-template #content>          
+          <button ejs-button>Normal</button>
+          <button ejs-button cssClass="e-flat" [isPrimary]="true">Flat</button>
+          <button ejs-button cssClass="e-warning">Warning</button>
+          <button ejs-button cssClass="e-success">Success</button>
+          <button ejs-button cssClass="e-small e-round" iconCss="e-btn-sb-icons e-add-icon" [isPrimary]="true"></button>
+        </ng-template>
+      </e-accordionitem>
+      <e-accordionitem expanded='false'>
+        <ng-template #header>
+          <div>DropDown</div>
+        </ng-template>
+        <ng-template #content>          
+          <ejs-combobox id='games' #sample [dataSource]='sportsData' [fields]='fields' ></ejs-combobox>
+        </ng-template>
+      </e-accordionitem>
+      
+    </e-accordionitems>
+</ejs-accordion>
+
+  <!-- <div class="control-section">
+    <ejs-spreadsheet #spreadsheet [openUrl]="openUrl" [saveUrl]="saveUrl" (created)="spreadsheetCreated()">      
+    </ejs-spreadsheet>
+</div> -->
+
+</div>
