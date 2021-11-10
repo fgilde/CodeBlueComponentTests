@@ -1,0 +1,22 @@
+{
+  "applicationEngine": "angular",
+  "build": {
+    "commands": [
+      {
+        "command": "build-theme",
+        "options": {
+          "inputFile": "src/themes/codeblue.base.json",
+          "outputFile": "src/themes/generated/theme.codeblue.css"
+        }
+      },      
+      {
+        "command": "export-theme-vars",
+        "options": {
+          "inputFile": "src/themes/codeblue.base.json",
+          "outputFile": "src/themes/generated/variables.codeblue.scss"
+        }
+      }
+
+    ]
+  }
+}
